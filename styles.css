@@ -1,0 +1,298 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #222;
+  background: #fafafa;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 180px;
+  border-right: 1px solid #ccc;
+  padding: 12px;
+}
+
+.brand-title {
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nav-item {
+  padding: 8px;
+  border: 1px solid transparent;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.nav-item.active {
+  font-weight: bold;
+  border-color: #999;
+}
+
+.main {
+  flex: 1;
+  padding: 16px;
+  overflow: auto;
+}
+
+.breadcrumb {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.panel-section { display: none; }
+
+.section-title {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.tabs {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.tab-btn {
+  padding: 6px 10px;
+  border: 1px solid #999;
+  background: #f2f2f2;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: #ddd;
+  font-weight: bold;
+}
+
+.logo-canvas {
+  border: 1px solid #ccc;
+  padding: 12px;
+  background: #fff;
+  margin-bottom: 12px;
+}
+
+.canvas-header {
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.logo-card {
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 10px;
+  min-height: 140px;
+  background: #f6f6f6;
+}
+
+.placeholder.shape {
+  width: 60px;
+  height: 60px;
+  background: #cfcfcf;
+  margin: 0 auto;
+}
+
+.logo-card .label {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.download-btn {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  padding: 4px 8px;
+  border: 1px solid #999;
+  background: #e6e6e6;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.logo-more {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #444;
+  text-align: center;
+  display: none;
+}
+
+.legacy-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #222;
+  cursor: pointer;
+}
+
+.legacy-grid {
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 8px;
+}
+
+.legacy-card {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+  background: #fff;
+}
+
+.legacy-placeholder {
+  height: 50px;
+  background: #d0d0d0;
+  margin-bottom: 6px;
+}
+
+.hidden { display: none; }
+
+.color-panels {
+  border: 1px solid #ccc;
+  padding: 12px;
+  background: #fff;
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 10px;
+}
+
+.swatch {
+  text-align: center;
+  padding: 10px;
+  border: 1px dashed #bbb;
+}
+
+.swatch-circle {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 6px;
+  border-radius: 50%;
+  border: 1px solid #999;
+}
+
+.swatch-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.copy-btn {
+  padding: 4px 6px;
+  border: 1px solid #999;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+.copy-status {
+  margin-top: 8px;
+  min-height: 16px;
+  color: #333;
+  font-size: 12px;
+}
+
+.zoom-box {
+  height: 200px;
+  background: #e3e3e3;
+  border: 1px solid #ccc;
+}
+
+.zoom-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  align-items: center;
+}
+
+.zoom-label {
+  font-size: 13px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.photo-placeholder {
+  padding-top: 60%;
+  background: #d9d9d9;
+  border: 1px solid #bfbfbf;
+}
+
+.helper-text {
+  font-size: 13px;
+  color: #444;
+}
+
+.lottie-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.lottie-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background: #fff;
+  text-align: center;
+}
+
+.lottie-placeholder {
+  height: 100px;
+  background: #d0d0d0;
+  margin-bottom: 6px;
+}
+
+.presentation-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.presentation-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background: #fff;
+}
+
+.presentation-placeholder {
+  height: 100px;
+  background: #e0e0e0;
+  border: 1px dashed #aaa;
+}
+
+.presentation-footer {
+  margin-top: 6px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}

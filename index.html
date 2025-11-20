@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MPENGS Brand Asset System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand-title">Brand asset system</div>
+      <nav class="nav-list">
+        <button class="nav-item active" data-target="sectionLogo">Logo</button>
+        <button class="nav-item" data-target="sectionColors">Colors</button>
+        <button class="nav-item" data-target="sectionZoom">Zoom background</button>
+        <button class="nav-item" data-target="sectionPhoto">Photography boxes</button>
+        <button class="nav-item" data-target="sectionLottie">Lottie</button>
+        <button class="nav-item" data-target="sectionPresentations">Presentations</button>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <div class="breadcrumb">Brand Asset System &gt; Brand &gt; MPENGS</div>
+
+      <section id="sectionLogo" class="panel-section" style="display: block;">
+        <h2 class="section-title">Logo</h2>
+        <div class="tabs">
+          <button class="tab-btn active" data-target="primary">Primary</button>
+          <button class="tab-btn" data-target="black">Black</button>
+          <button class="tab-btn" data-target="white">White</button>
+          <button class="tab-btn" data-target="more">&gt;&gt;</button>
+        </div>
+        <div class="logo-canvas">
+          <div class="canvas-header">
+            <span id="logoColorLabel">Current color: Primary</span>
+          </div>
+          <div class="logo-grid">
+            <div class="logo-card">
+              <div class="placeholder shape"></div>
+              <div class="label">Full lockup</div>
+              <button class="download-btn">Download</button>
+            </div>
+            <div class="logo-card">
+              <div class="placeholder shape"></div>
+              <div class="label">Horizontal</div>
+              <button class="download-btn">Download</button>
+            </div>
+            <div class="logo-card">
+              <div class="placeholder shape"></div>
+              <div class="label">Symbol only</div>
+              <button class="download-btn">Download</button>
+            </div>
+            <div class="logo-card">
+              <div class="placeholder shape"></div>
+              <div class="label">Wordmark only</div>
+              <button class="download-btn">Download</button>
+            </div>
+          </div>
+          <div class="logo-more" id="logoMoreMessage">Additional variants coming soon</div>
+        </div>
+        <div class="legacy-toggle" id="legacyToggle">
+          <span class="caret">&#9656;</span>
+          <span class="toggle-label">Show legacy logos</span>
+        </div>
+        <div class="legacy-grid hidden" id="legacyLogos">
+          <div class="legacy-card">
+            <div class="legacy-placeholder"></div>
+            <div class="label">Logo 1990</div>
+          </div>
+          <div class="legacy-card">
+            <div class="legacy-placeholder"></div>
+            <div class="label">Logo 2000</div>
+          </div>
+          <div class="legacy-card">
+            <div class="legacy-placeholder"></div>
+            <div class="label">Logo 2005</div>
+          </div>
+          <div class="legacy-card">
+            <div class="legacy-placeholder"></div>
+            <div class="label">Logo 2010</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sectionColors" class="panel-section">
+        <h2 class="section-title">Colors</h2>
+        <div class="tabs">
+          <button class="tab-btn active" data-target="primaryColors">Primary</button>
+          <button class="tab-btn" data-target="secondaryColors">Secondary</button>
+          <button class="tab-btn" data-target="accentColors">Accents</button>
+        </div>
+        <div class="color-panels">
+          <div class="color-grid" data-group="primaryColors">
+            <div class="swatch" data-color="#1A73E8">
+              <div class="swatch-circle" style="background-color: #1A73E8;"></div>
+              <div class="swatch-label">
+                <span>#1A73E8</span>
+                <button class="copy-btn">Copy</button>
+              </div>
+            </div>
+            <div class="swatch" data-color="#0F4C81">
+              <div class="swatch-circle" style="background-color: #0F4C81;"></div>
+              <div class="swatch-label">
+                <span>#0F4C81</span>
+                <button class="copy-btn">Copy</button>
+              </div>
+            </div>
+            <div class="swatch" data-color="#0B2D4A">
+              <div class="swatch-circle" style="background-color: #0B2D4A;"></div>
+              <div class="swatch-label">
+                <span>#0B2D4A</span>
+                <button class="copy-btn">Copy</button>
+              </div>
+            </div>
+          </div>
+          <div class="color-grid hidden" data-group="secondaryColors">
+            <div class="swatch" data-color="#8BC34A">
+              <div class="swatch-circle" style="background-color: #8BC34A;"></div>
+              <div class="swatch-label">
+                <span>#8BC34A</span>
+                <button class="copy-btn">Copy</button>
+              </div>
+            </div>
+            <div class="swatch" data-color="#FFC107">
+              <div class="swatch-circle" style="background-color: #FFC107;"></div>
+              <div class="swatch-label">
+                <span>#FFC107</span>
+                <button class="copy-btn">Copy</button>
+              </div>
+            </div>
+            <div class="swatch" data-color="#FF7043">
+              <div class="swatch-circle" style="background-color: #FF7043;"></div>
+              <div class="swatch-label">
+                <span>#FF7043</span>
+                <button class="copy-btn">Copy</button>
+              </div>
+            </div>
+          </div>
+          <div class="color-grid hidden" data-group="accentColors">
+            <div class="swatch" data-color="#9C27B0">
+              <div class="swatch-circle" style="background-color: #9C27B0;"></div>
+              <div class="swatch-label">
+                <span>#9C27B0</span>
+                <button class="copy-btn">Copy</button>
+              </div>
+            </div>
+            <div class="swatch" data-color="#26A69A">
+              <div class="swatch-circle" style="background-color: #26A69A;"></div>
+              <div class="swatch-label">
+                <span>#26A69A</span>
+                <button class="copy-btn">Copy</button>
+              </div>
+            </div>
+            <div class="swatch" data-color="#E91E63">
+              <div class="swatch-circle" style="background-color: #E91E63;"></div>
+              <div class="swatch-label">
+                <span>#E91E63</span>
+                <button class="copy-btn">Copy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copy-status" id="copyStatus"></div>
+      </section>
+
+      <section id="sectionZoom" class="panel-section">
+        <h2 class="section-title">Zoom background</h2>
+        <div class="zoom-box"></div>
+        <div class="zoom-actions">
+          <div class="zoom-label">Standard Zoom background</div>
+          <button class="download-btn">Download</button>
+        </div>
+      </section>
+
+      <section id="sectionPhoto" class="panel-section">
+        <h2 class="section-title">Photography boxes</h2>
+        <div class="photo-grid">
+          <div class="photo-placeholder"></div>
+          <div class="photo-placeholder"></div>
+          <div class="photo-placeholder"></div>
+          <div class="photo-placeholder"></div>
+          <div class="photo-placeholder"></div>
+          <div class="photo-placeholder"></div>
+          <div class="photo-placeholder"></div>
+          <div class="photo-placeholder"></div>
+          <div class="photo-placeholder"></div>
+        </div>
+        <p class="helper-text">Use these boxes as guides for photography placement.</p>
+      </section>
+
+      <section id="sectionLottie" class="panel-section">
+        <h2 class="section-title">Lottie</h2>
+        <div class="lottie-row">
+          <div class="lottie-card">
+            <div class="lottie-placeholder"></div>
+            <div class="label">Lottie icon animation</div>
+          </div>
+          <div class="lottie-card">
+            <div class="lottie-placeholder"></div>
+            <div class="label">Lottie icon animation</div>
+          </div>
+          <div class="lottie-card">
+            <div class="lottie-placeholder"></div>
+            <div class="label">Lottie icon animation</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sectionPresentations" class="panel-section">
+        <h2 class="section-title">Presentations</h2>
+        <div class="presentation-stack">
+          <div class="presentation-card">
+            <div class="presentation-placeholder"></div>
+            <div class="presentation-footer">
+              <span>Team update template</span>
+              <button class="download-btn">Download template</button>
+            </div>
+          </div>
+          <div class="presentation-card">
+            <div class="presentation-placeholder"></div>
+            <div class="presentation-footer">
+              <span>Product overview template</span>
+              <button class="download-btn">Download template</button>
+            </div>
+          </div>
+          <div class="presentation-card">
+            <div class="presentation-placeholder"></div>
+            <div class="presentation-footer">
+              <span>All-hands template</span>
+              <button class="download-btn">Download template</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
