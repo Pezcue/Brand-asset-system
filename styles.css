@@ -4,7 +4,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: #222;
-  background: #fafafa;
+  background: #f2f2f2;
 }
 
 .app {
@@ -63,6 +63,16 @@ body {
   font-size: 18px;
 }
 
+.status-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+  color: #444;
+  flex-wrap: wrap;
+}
+
 .tabs {
   display: flex;
   gap: 6px;
@@ -82,11 +92,61 @@ body {
   font-weight: bold;
 }
 
+.tab-btn.isDisabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 .logo-canvas {
   border: 1px solid #ccc;
   padding: 12px;
   background: #fff;
   margin-bottom: 12px;
+}
+
+.logo-layout {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.logo-filter {
+  width: 180px;
+  border: 1px solid #d0d0d0;
+  background: #f8f8f8;
+  padding: 8px;
+}
+
+.filter-title {
+  font-weight: bold;
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.filter-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 1px solid #d0d0d0;
+  background: #f7f7f7;
+  color: #222;
+  padding: 6px 8px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.filter-btn.active {
+  background: #e7f1ff;
+  border-color: #79a8e6;
+  font-weight: bold;
+  color: #0f4c81;
+}
+
+.tab-btn.isDisabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .canvas-header {
@@ -99,6 +159,10 @@ body {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px;
+}
+
+.logo-layout .logo-grid {
+  flex: 1;
 }
 
 @media (max-width: 1100px) {
@@ -181,6 +245,22 @@ body {
   background: #f8f8f8;
 }
 
+.logo-more {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #444;
+  text-align: center;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .logo-layout {
+    flex-direction: column;
+  }
+  .logo-filter {
+    width: 100%;
+  }
+}
 .presentation-card .doc-embed {
   height: 320px;
 }
@@ -462,4 +542,13 @@ body {
 .font-card .download-btn {
   position: static;
   align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+  .logo-layout {
+    flex-direction: column;
+  }
+  .logo-filter {
+    width: 100%;
+  }
 }

@@ -1,69 +1,62 @@
+﻿const formatPriority = {
+  svg: 0,
+  ai: 1,
+  eps: 2,
+  png: 10,
+  jpg: 11,
+  jpeg: 12,
+  gif: 13,
+  mp4: 14,
+  pdf: 15,
+  docx: 16,
+  zip: 17,
+  otf: 18,
+  image: 19
+};
+
 const assetManifest = [
-  // Logo vectors and rasters
-  { name: 'MP+ (primary mark)', file: 'Assets/MP+.svg', type: 'logo', format: 'svg' },
-  { name: 'MP+ primary (AI)', file: 'Assets/MP+.ai', type: 'logo', format: 'ai' },
-  { name: 'MP+ primary (EPS)', file: 'Assets/MP+.eps', type: 'logo', format: 'eps' },
-  { name: 'MP+ horizontal (SVG)', file: 'Assets/MP+ horizontal.svg', type: 'logo', format: 'svg' },
-  { name: 'MP+ horizontal (PNG)', file: 'Assets/1. MP Engineers Logo/MP+ horizontal.png', type: 'logo', format: 'png' },
-  { name: 'MP+ horizontal (JPG)', file: 'Assets/1. MP Engineers Logo/MP+ horizontal.jpg', type: 'logo', format: 'jpg' },
-  { name: 'MP+ horizontal (AI)', file: 'Assets/MP+ horizontal.ai', type: 'logo', format: 'ai' },
-  { name: 'MP+ horizontal white (AI)', file: 'Assets/MP+ horizontal white.ai', type: 'logo', format: 'ai' },
-  { name: 'MP+ horizontal outlined (AI)', file: 'Assets/1. MP Engineers Logo/MP+ Outlined/MP+ horizontal Outlined.ai', type: 'logo', format: 'ai' },
-  { name: 'MP+ mark outlined (AI)', file: 'Assets/1. MP Engineers Logo/MP+ Outlined/MP+ Outlined.ai', type: 'logo', format: 'ai' },
-  { name: 'Logo lockup CMYK (AI)', file: 'Assets/MP_logo-lockup_cmyk.ai', type: 'logo', format: 'ai' },
-  { name: 'Logo vertical (AI)', file: 'Assets/MP_logo-vertical.ai', type: 'logo', format: 'ai' },
-  { name: 'Logo lockup CMYK (PDF)', file: 'Assets/1. MP Engineers Logo/Various old/MP mark.pdf', type: 'logo', format: 'pdf' },
-  { name: 'Logo lockup CMYK (EPS)', file: 'Assets/1. MP Engineers Logo/MP Engineers+Architects_Logo Art & Font/MP_logo-lockup_cmyk.eps', type: 'logo', format: 'eps' },
-  { name: 'Logo lockup white PNG', file: 'Assets/1. MP Engineers Logo/MP Engineers+Architects_Logo Art & Font/MP_logo-lockup_white.png', type: 'logo', format: 'png' },
-  { name: 'Logo lockup white EPS', file: 'Assets/1. MP Engineers Logo/MP Engineers+Architects_Logo Art & Font/MP_logo-lockup_white.eps', type: 'logo', format: 'eps' },
-  { name: 'Logo mark black EPS', file: 'Assets/1. MP Engineers Logo/MP Engineers+Architects_Logo Art & Font/MP_logo-mark_black.eps', type: 'logo', format: 'eps' },
-  { name: 'Logo mark black PNG', file: 'Assets/1. MP Engineers Logo/MP Engineers+Architects_Logo Art & Font/MP_logo-mark_black.png', type: 'logo', format: 'png' },
-  { name: 'Logo mark white EPS', file: 'Assets/1. MP Engineers Logo/MP Engineers+Architects_Logo Art & Font/MP_logo-mark_white.eps', type: 'logo', format: 'eps' },
-  { name: 'Logo mark white PNG', file: 'Assets/1. MP Engineers Logo/MP Engineers+Architects_Logo Art & Font/MP_logo-mark_white.png', type: 'logo', format: 'png' },
-  { name: 'Logo mark cmyk EPS', file: 'Assets/1. MP Engineers Logo/MP Engineers+Architects_Logo Art & Font/MP_logo-mark_cmyk.eps', type: 'logo', format: 'eps' },
-  { name: 'Logo mark cmyk PNG', file: 'Assets/1. MP Engineers Logo/MP Engineers+Architects_Logo Art & Font/MP_logo-mark_cmyk.png', type: 'logo', format: 'png' },
-  { name: 'Vector file MP logo (SVG)', file: 'Assets/1. MP Engineers Logo/Various Colors/Vector file MP logo.svg', type: 'logo', format: 'svg' },
-  { name: 'Vector file MP logo (AI)', file: 'Assets/1. MP Engineers Logo/Various Colors/Vector file MP logo.ai', type: 'logo', format: 'ai' },
-  { name: 'Side lockup (SVG)', file: 'Assets/1. MP Engineers Logo/MP Engineers+Architects_Logo Art & Font/MP_logo-side-lockup.svg', type: 'logo', format: 'svg' },
-  { name: 'Horizontal pack (ZIP)', file: 'Assets/1. MP Engineers Logo/Horizontal MP+ Edit/MP + Various colors H.zip', type: 'package', format: 'zip' },
-  { name: 'Vertical pack (ZIP)', file: 'Assets/1. MP Engineers Logo/MP + Various colors vertical_Folder/Vertical MP+.zip', type: 'package', format: 'zip' },
-  { name: 'Horizontal bundle (ZIP)', file: 'Assets/1. MP Engineers Logo/MP + Various colors_ Horizontal/MP+ Horizontal.zip', type: 'package', format: 'zip' },
-  { name: 'Logo art bundle (ZIP)', file: 'Assets/1. MP Engineers Logo/z_Old/MP Engineers+Architects_Logo Art.zip', type: 'package', format: 'zip' },
+  // Logos (vector & raster)
+  { name: 'MP+ primary mark', file: 'Assets/logos/MP+.svg', type: 'logo', format: 'svg' },
+  { name: 'MP+ primary mark (AI)', file: 'Assets/logos/ai/MP+.ai', type: 'logo', format: 'ai' },
+  { name: 'MP+ primary mark (EPS)', file: 'Assets/logos/MP+.eps', type: 'logo', format: 'eps' },
+  { name: 'MP+ horizontal', file: 'Assets/logos/MP+ horizontal.svg', type: 'logo', format: 'svg' },
+  { name: 'MP+ horizontal (PNG)', file: 'Assets/logos/MP+ horizontal.png', type: 'logo', format: 'png' },
+  { name: 'MP+ horizontal (JPG)', file: 'Assets/logos/MP+ horizontal.jpg', type: 'logo', format: 'jpg' },
+  { name: 'MP+ horizontal (AI)', file: 'Assets/logos/ai/MP+ horizontal.ai', type: 'logo', format: 'ai' },
+  { name: 'MP+ horizontal white (AI)', file: 'Assets/logos/ai/MP+ horizontal white.ai', type: 'logo', format: 'ai' },
+  { name: 'Logo lockup CMYK (AI)', file: 'Assets/logos/ai/MP_logo-lockup_cmyk.ai', type: 'logo', format: 'ai' },
+  { name: 'Logo vertical (AI)', file: 'Assets/logos/ai/MP_logo-vertical.ai', type: 'logo', format: 'ai' },
+  { name: 'Logo lockup CMYK (EPS)', file: 'Assets/logos/MP_logo-lockup_cmyk.eps', type: 'logo', format: 'eps' },
+  { name: 'Logo lockup CMYK (JPG)', file: 'Assets/logos/MP_logo-lockup_cmyk.jpg', type: 'logo', format: 'jpg' },
+  { name: 'Logo lockup white (PNG)', file: 'Assets/logos/MP_logo-lockup_white.png', type: 'logo', format: 'png' },
+  { name: 'Logo lockup white (EPS)', file: 'Assets/logos/MP_logo-lockup_white.eps', type: 'logo', format: 'eps' },
+  { name: 'Logo mark black (EPS)', file: 'Assets/logos/MP_logo-mark_black.epsy', type: 'logo', format: 'eps' },
+  { name: 'Logo mark black (PNG)', file: 'Assets/logos/MP_logo-mark_black.png', type: 'logo', format: 'png' },
+  { name: 'Logo mark cmyk (EPS)', file: 'Assets/logos/MP_logo-mark_cmyk.eps', type: 'logo', format: 'eps' },
+  { name: 'Logo mark cmyk (PNG)', file: 'Assets/logos/MP_logo-mark_cmyk.png', type: 'logo', format: 'png' },
+  { name: 'Logo mark white (EPS)', file: 'Assets/logos/MP_logo-mark_white.eps', type: 'logo', format: 'eps' },
+  { name: 'Logo mark white (PNG)', file: 'Assets/logos/MP_logo-mark_white.png', type: 'logo', format: 'png' },
+  { name: 'Vector file MP logo (SVG)', file: 'Assets/logos/Vector file MP logo.svg', type: 'logo', format: 'svg' },
+  { name: 'Vector file MP logo (AI)', file: 'Assets/logos/ai/Vector file MP logo.ai', type: 'logo', format: 'ai' },
+  { name: 'MP+ white blue background', file: 'Assets/logos/MP+ white blue bg.png', type: 'logo', format: 'png' },
+  { name: 'MP+ white', file: 'Assets/logos/MP+ white.png', type: 'logo', format: 'png' },
+  { name: 'MP+ PDF', file: 'Assets/logos/MP+.pdf', type: 'logo', format: 'pdf' },
+  { name: 'MP+ GIF', file: 'Assets/logos/MP+.gif', type: 'logo', format: 'gif' },
 
-  // Legacy logos (z_Old) grouped by year/date
-  { name: 'MP LOGO color (AI)', file: 'Assets/1. MP Engineers Logo/z_Old/MP LOGO_color.ai', type: 'legacy', format: 'ai', year: '2025', date: '2025-11-21' },
-  { name: 'MP LOGO color (JPG)', file: 'Assets/1. MP Engineers Logo/z_Old/MP LOGO_color.jpg', type: 'legacy', format: 'jpg', year: '2025', date: '2025-11-21' },
-  { name: 'MP LOGO color (PNG)', file: 'Assets/1. MP Engineers Logo/z_Old/MP LOGO_color.png', type: 'legacy', format: 'png', year: '2025', date: '2025-11-21' },
-  { name: 'MP LOGO grayscale', file: 'Assets/1. MP Engineers Logo/z_Old/MP_LOGO_Grayscale.jpg', type: 'legacy', format: 'jpg', year: '2025', date: '2025-11-21' },
-  { name: 'MP LOGO white (AI)', file: 'Assets/1. MP Engineers Logo/z_Old/MP LOGO_white.ai', type: 'legacy', format: 'ai', year: '2025', date: '2025-11-21' },
-  { name: 'MP LOGO color graphic only - Blue (AI)', file: 'Assets/1. MP Engineers Logo/z_Old/MP LOGO_color graphic only - Blue.ai', type: 'legacy', format: 'ai', year: '2025', date: '2025-11-21' },
-  { name: 'MP LOGO color graphic only - Black (AI)', file: 'Assets/1. MP Engineers Logo/z_Old/MP LOGO_color graphic only - Black.ai', type: 'legacy', format: 'ai', year: '2025', date: '2025-11-21' },
-  { name: 'MP LOGO color graphic only - White (PNG)', file: 'Assets/1. MP Engineers Logo/z_Old/MP LOGO_color graphic only -White.png', type: 'legacy', format: 'png', year: '2025', date: '2025-11-21' },
-  { name: 'MP LOGO color graphic only 5x5 (JPG)', file: 'Assets/1. MP Engineers Logo/z_Old/MP LOGO_color graphic only 5x5-01.jpg', type: 'legacy', format: 'jpg', year: '2025', date: '2025-11-21' },
-  { name: 'MP LOGO color graphic only - Black (PDF)', file: 'Assets/1. MP Engineers Logo/z_Old/MP LOGO_color graphic only - Black.pdf', type: 'legacy', format: 'pdf', year: '2025', date: '2025-11-21' },
-  { name: 'MP LOGO color (revised AI)', file: 'Assets/1. MP Engineers Logo/z_Old/MP LOGO_color_rev.ai', type: 'legacy', format: 'ai', year: '2025', date: '2025-11-21' },
-  { name: 'MP LOGO color graphic only (GIF)', file: 'Assets/1. MP Engineers Logo/z_Old/MPEA-LOGO_color.gif', type: 'legacy', format: 'gif', year: '2025', date: '2025-11-21' },
-  { name: 'MP LOGO color graphic only (GIF alt)', file: 'Assets/1. MP Engineers Logo/z_Old/MP-LOGO.gif.gif', type: 'legacy', format: 'gif', year: '2025', date: '2025-11-21' },
-  { name: 'MPE LOGO color (AI)', file: 'Assets/1. MP Engineers Logo/z_Old/MPE LOGO_color.ai', type: 'legacy', format: 'ai', year: '2025', date: '2025-11-21' },
-  { name: 'MPEA LOGO color (AI)', file: 'Assets/1. MP Engineers Logo/z_Old/MPEA LOGO_color.ai', type: 'legacy', format: 'ai', year: '2025', date: '2025-11-21' },
-  { name: 'MPEA LOGO white (AI)', file: 'Assets/1. MP Engineers Logo/z_Old/MPEA LOGO_white.ai', type: 'legacy', format: 'ai', year: '2025', date: '2025-11-21' },
-  { name: 'Logo summary (PDF)', file: 'Assets/1. MP Engineers Logo/z_Old/[Untitled]_2022021715434884.pdf', type: 'legacy', format: 'pdf', year: '2022', date: '2022-02-17' },
+  // Animation / motion
+  { name: 'Logo animation GIF', file: 'Assets/logos/MP_Gif.gif', type: 'animation', format: 'gif' },
+  { name: 'Motion reel', file: 'Assets/multimedia/MP Engineers 3D.mp4', type: 'motion', format: 'mp4' },
+  { name: 'Lottie MP', file: 'Assets/multimedia/lottieMP.mp4', type: 'motion', format: 'mp4' },
+  { name: 'Lottie MP alt', file: 'Assets/multimedia/lottieMP_1.mp4', type: 'motion', format: 'mp4' },
+  { name: 'FSK Bridge', file: 'Assets/multimedia/FSKBridge6.mp4', type: 'motion', format: 'mp4' },
+  { name: 'MP Not Lottie', file: 'Assets/multimedia/MPnotLottie.mp4', type: 'motion', format: 'mp4' },
 
-  // Backgrounds & imagery
-  { name: 'Zoom background', file: 'Assets/Image20251119162949.png', type: 'background', format: 'image' },
-  { name: 'Photography A', file: 'Assets/Image20251119163022.png', type: 'photo', format: 'image' },
-  { name: 'Photography B', file: 'Assets/Image20251119163053.jpg', type: 'photo', format: 'image' },
+  // Documents & packs
+  { name: 'MP Style Guide June 2025', file: 'Assets/documents/MP Style Guide June 2025.pdf', type: 'document', format: 'pdf' },
+  { name: 'Style Guide', file: 'Assets/documents/Style Guide.pdf', type: 'document', format: 'pdf' },
 
-  // Motion
-  { name: 'Motion bumper', file: 'Assets/MP Engineers 3D.mp4', type: 'video', format: 'mp4' },
-
-  // Documents & templates
-  { name: 'MP Style Guide June 2025', file: 'Assets/MP Style Guide June 2025.pdf', type: 'document', format: 'pdf' },
-  { name: 'Style Guide', file: 'Assets/Style Guide.pdf', type: 'document', format: 'pdf' },
-  { name: 'Tension Fabric Display template', file: 'Assets/1. MP Engineers Logo/EasySigns_-_Tension_Fabric_Displays_Straight_8Ft_x_7Ft_3\"_-_Artwork_Template_-_V2_Folder/EasySigns_-_Tension_Fabric_Displays_Straight_8Ft_x_7Ft_3\"_-_Artwork_Template_-_V2.pdf', type: 'document', format: 'pdf' },
-  { name: 'MP Engineers logo (doc)', file: 'Assets/1. MP Engineers Logo/z_Old/MP Engineers logo.docx', type: 'document', format: 'docx' },
-  { name: 'MP Engs Logo wording', file: 'Assets/1. MP Engineers Logo/z_Old/MP Engs Logo-Wording.pdf', type: 'document', format: 'pdf' },
-  { name: 'Logo summary', file: 'Assets/1. MP Engineers Logo/z_Old/[Untitled]_2022021715434884.pdf', type: 'document', format: 'pdf' },
+  // Archives / packs
+  { name: 'Logo pack archive', file: 'Assets/logos/legacy/MP Engineers+Architects_Logo Art.zip', type: 'archive', format: 'zip' },
 
   // Fonts
   { name: 'Myriad Pro Regular', file: 'Assets/1. MP Engineers Logo/EasySigns_-_Tension_Fabric_Displays_Straight_8Ft_x_7Ft_3\"_-_Artwork_Template_-_V2_Folder/Fonts/MyriadPro-Regular.otf', type: 'font', format: 'otf' },
@@ -72,10 +65,22 @@ const assetManifest = [
   { name: 'Neue Haas Grotesk TX 55 Regular (horizontal set)', file: 'Assets/1. MP Engineers Logo/MP + Various colors_ Horizontal/Fonts/NHaasGroteskTXStd-55Rg.otf', type: 'font', format: 'otf' },
   { name: 'Neue Haas Grotesk Std 45 Light', file: 'Assets/1. MP Engineers Logo/MP Engineers+Architects_Logo Art & Font/Neue Haas Grotesk/Neue Haas Grotesk/NHaasGroteskDSStd-45Lt.otf', type: 'font', format: 'otf' },
   { name: 'Neue Haas Grotesk Std 55 Regular', file: 'Assets/1. MP Engineers Logo/MP Engineers+Architects_Logo Art & Font/Neue Haas Grotesk/Neue Haas Grotesk/NHaasGroteskDSStd-55Rg.otf', type: 'font', format: 'otf' },
-  { name: 'Neue Haas Grotesk Std 65 Medium', file: 'Assets/1. MP Engineers Logo/MP Engineers+Architects_Logo Art & Font/Neue Haas Grotesk/Neue Haas Grotesk/NHaasGroteskDSStd-65Md.otf', type: 'font', format: 'otf' },
+  { name: 'Neue Haas Grotesk Std 65 Medium (bundle)', file: 'Assets/1. MP Engineers Logo/MP Engineers+Architects_Logo Art & Font/Neue Haas Grotesk/Neue Haas Grotesk/NHaasGroteskDSStd-65Md.otf', type: 'font', format: 'otf' },
   { name: 'Neue Haas Grotesk Std 75 Bold', file: 'Assets/1. MP Engineers Logo/MP Engineers+Architects_Logo Art & Font/Neue Haas Grotesk/Neue Haas Grotesk/NHaasGroteskDSStd-75Bd.otf', type: 'font', format: 'otf' },
-  { name: 'Neue Haas Grotesk Std 95 Black', file: 'Assets/1. MP Engineers Logo/MP Engineers+Architects_Logo Art & Font/Neue Haas Grotesk/Neue Haas Grotesk/NHaasGroteskDSStd-95Blk.otf', type: 'font', format: 'otf' }
+  { name: 'Neue Haas Grotesk Std 95 Black', file: 'Assets/1. MP Engineers Logo/MP Engineers+Architects_Logo Art & Font/Neue Haas Grotesk/Neue Haas Grotesk/NHaasGroteskDSStd-95Blk.otf', type: 'font', format: 'otf' },
+
+  // Photos / backgrounds
+  { name: 'Zoom background', file: 'Assets/images/Image20251119162949.png', type: 'image', format: 'image' },
+  { name: 'Photography A', file: 'Assets/images/Image20251119163022.png', type: 'photo', format: 'image' },
+  { name: 'Photography B', file: 'Assets/images/Image20251119163053.jpg', type: 'photo', format: 'image' }
 ];
+
+let currentType = 'logo';
+let currentTypeLabel = 'Logos';
+let currentFormat = 'all';
+let currentFormatLabel = 'All formats';
+let currentVariant = 'all';
+let currentVariantLabel = 'All types';
 
 document.addEventListener('DOMContentLoaded', () => {
   const navItems = document.querySelectorAll('.nav-item');
@@ -98,6 +103,8 @@ document.addEventListener('DOMContentLoaded', () => {
   setupColorTabs();
   setupLegacyToggle();
   setupCopyButtons();
+  setupLogoTypeFilter();
+  renderLogoGrid();
   renderLegacyLogos();
   renderZoomBackground();
   renderPhotography();
@@ -108,24 +115,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function setupLogoTabs() {
   const logoTabs = document.querySelectorAll('#sectionLogo .tab-btn');
-  const label = document.getElementById('logoColorLabel');
-  const moreMessage = document.getElementById('logoMoreMessage');
-
   logoTabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      const target = tab.dataset.target;
-
+      const target = tab.dataset.format || 'all';
       logoTabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
-
-      const labelText = target === 'ai' ? 'Illustrator artwork' : target === 'all' ? 'All logo files' : 'SVG vector';
-      label.textContent = `Current filter: ${labelText}`;
-      renderLogoGrid(target);
-      moreMessage.textContent = '';
+      currentFormat = target;
+      currentFormatLabel = tab.textContent.trim();
+      updateStatusText();
+      applyLogoFilters();
     });
   });
-
-  renderLogoGrid('svg');
 }
 
 function setupColorTabs() {
@@ -187,19 +187,114 @@ function setupCopyButtons() {
   }
 }
 
-function renderLogoGrid(filter) {
+function setupLogoTypeFilter() {
+  const variantButtons = document.querySelectorAll('.logo-filter .filter-btn');
+  if (!variantButtons.length) return;
+
+  variantButtons.forEach(btn => {
+    btn.addEventListener('click', e => {
+      if (e.preventDefault) e.preventDefault();
+      variantButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentVariant = btn.dataset.variant || 'all';
+      currentVariantLabel = btn.textContent.trim();
+      updateStatusText();
+      applyLogoFilters();
+    });
+  });
+
+  updateStatusText();
+}
+
+function applyLogoFilters() {
+  const cards = document.querySelectorAll('#logoGrid .logo-card');
+  cards.forEach(card => {
+    const type = card.dataset.type;
+    const subtype = card.dataset.subtype;
+    const variant = card.dataset.variant;
+    let show = true;
+
+    // Always logo grid: type must be logo
+    if (type !== 'logo') show = false;
+
+    // Format filter (logos only)
+    if (show && currentFormat !== 'all') {
+      if (subtype !== currentFormat) show = false;
+    }
+
+    // Variant filter
+    if (show && currentVariant !== 'all') {
+      if (variant !== currentVariant) show = false;
+    }
+
+    card.style.display = show ? '' : 'none';
+  });
+}
+
+function mapTypeFromFormat(format, assetType) {
+  const fmt = (format || '').toLowerCase();
+  const t = (assetType || '').toLowerCase();
+  if (t === 'background' || t === 'photo') return 'image';
+  if (t === 'video') return 'motion';
+  if (t === 'document') return 'document';
+  if (t === 'font') return 'font';
+  if (t === 'package') return 'archive';
+  if (t === 'animation') return 'animation';
+  if (t) return t;
+
+  if (['svg', 'ai', 'eps', 'png', 'jpg', 'jpeg'].includes(fmt)) return 'logo';
+  if (fmt === 'gif') return 'animation';
+  if (fmt === 'mp4') return 'motion';
+  if (fmt === 'pdf' || fmt === 'docx') return 'document';
+  if (fmt === 'zip') return 'archive';
+  if (fmt === 'otf') return 'font';
+  if (fmt === 'image') return 'image';
+  return 'logo';
+}
+
+function mapSubtypeFromFormat(format) {
+  const fmt = (format || '').toLowerCase();
+  if (['svg', 'ai', 'eps'].includes(fmt)) return 'vector';
+  if (['png', 'jpg', 'jpeg'].includes(fmt)) return 'raster';
+  if (fmt === 'gif') return 'gif';
+  if (fmt === 'pdf') return 'pdf';
+  return '';
+}
+
+function mapVariantFromAsset(asset) {
+  const source = `${asset.name} ${asset.file}`.toLowerCase();
+  if (source.includes('white')) return 'white';
+  if (source.includes('black')) return 'black';
+  if (source.includes('horizontal')) return 'horizontal';
+  if (source.includes('square') || source.includes('favicon')) return 'square';
+  return 'all';
+}
+
+function updateStatusText() {
+  const status = document.getElementById('logoTypeStatus');
+  const label = document.getElementById('logoColorLabel');
+  if (status) {
+    status.textContent = `Current filter: ${currentTypeLabel} - ${currentFormatLabel} - ${currentVariantLabel}`;
+  }
+  if (label) {
+    label.textContent = `Format filter: ${currentFormatLabel}`;
+  }
+}
+
+function renderLogoGrid() {
   const logoGrid = document.getElementById('logoGrid');
   const moreMessage = document.getElementById('logoMoreMessage');
   const logos = assetManifest
     .filter(asset => asset.type === 'logo')
-    .sort((a, b) => a.format.localeCompare(b.format) || a.name.localeCompare(b.name));
+    .sort((a, b) => {
+      const pa = formatPriority[a.format] ?? 99;
+      const pb = formatPriority[b.format] ?? 99;
+      return pa - pb || a.name.localeCompare(b.name);
+    });
 
   logoGrid.innerHTML = '';
 
-  const filtered = logos.filter(asset => {
-    if (filter === 'all') return true;
-    return asset.format === filter;
-  });
+  const filtered = logos;
 
   if (!filtered.length) {
     logoGrid.innerHTML = '<p>No logo assets available for this filter.</p>';
@@ -211,6 +306,13 @@ function renderLogoGrid(filter) {
   filtered.forEach(asset => {
     const card = document.createElement('div');
     card.className = 'logo-card';
+    const mappedType = mapTypeFromFormat(asset.format, asset.type);
+    const mappedSubtype = mappedType === 'logo' ? mapSubtypeFromFormat(asset.format) : '';
+    const mappedVariant = mapVariantFromAsset(asset);
+    card.dataset.type = mappedType;
+    if (mappedSubtype) card.dataset.subtype = mappedSubtype;
+    card.dataset.variant = mappedVariant;
+    card.dataset.ext = asset.format;
 
     if (asset.format === 'svg' || ['png', 'jpg', 'jpeg', 'gif'].includes(asset.format)) {
       const img = document.createElement('img');
@@ -249,12 +351,13 @@ function renderLogoGrid(filter) {
     logoGrid.appendChild(card);
   });
 
-  moreMessage.textContent = `Showing ${filtered.length} of ${logos.length} logo files`;
+  moreMessage.textContent = `Showing ${filtered.length} assets`;
   moreMessage.style.display = 'block';
+  applyLogoFilters();
 }
 
 function renderZoomBackground() {
-  const zoomAsset = assetManifest.find(asset => asset.type === 'background');
+  const zoomAsset = assetManifest.find(asset => asset.type === 'image' && asset.name.toLowerCase().includes('zoom'));
   const preview = document.getElementById('zoomPreview');
   const label = document.getElementById('zoomLabel');
   const download = document.getElementById('zoomDownload');
@@ -274,7 +377,9 @@ function renderZoomBackground() {
 
 function renderPhotography() {
   const photoGrid = document.getElementById('photoGrid');
-  const photos = assetManifest.filter(asset => asset.type === 'photo').sort((a, b) => a.name.localeCompare(b.name));
+  const photos = assetManifest
+    .filter(asset => asset.type === 'photo')
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   photoGrid.innerHTML = '';
 
@@ -300,7 +405,7 @@ function renderPhotography() {
 
 function renderMotionSection() {
   const motionRow = document.getElementById('motionRow');
-  const videos = assetManifest.filter(asset => asset.type === 'video');
+  const videos = assetManifest.filter(asset => asset.type === 'motion');
 
   motionRow.innerHTML = '';
 
@@ -338,7 +443,7 @@ function renderMotionSection() {
 function renderPresentations() {
   const stack = document.getElementById('presentationStack');
   const documents = assetManifest
-    .filter(asset => asset.type === 'document' || asset.type === 'package')
+    .filter(asset => asset.type === 'document' || asset.type === 'archive')
     .sort((a, b) => a.name.localeCompare(b.name));
 
   stack.innerHTML = '';
@@ -508,3 +613,7 @@ function renderLegacyLogos() {
       container.appendChild(groupWrapper);
     });
 }
+
+
+
+

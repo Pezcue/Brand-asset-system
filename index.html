@@ -27,15 +27,28 @@
       <section id="sectionLogo" class="panel-section" style="display: block;">
         <h2 class="section-title">Logo</h2>
         <div class="tabs">
-          <button class="tab-btn active" data-target="svg">SVG vector</button>
-          <button class="tab-btn" data-target="ai">Illustrator (AI)</button>
-          <button class="tab-btn" data-target="all">All logo assets</button>
+          <button class="tab-btn active" data-format="all">All formats</button>
+          <button class="tab-btn" data-format="vector">Vector (svg, ai, eps)</button>
+          <button class="tab-btn" data-format="raster">Raster (png, jpg)</button>
+          <button class="tab-btn" data-format="gif">GIF</button>
+          <button class="tab-btn" data-format="pdf">PDF</button>
         </div>
         <div class="logo-canvas">
-          <div class="canvas-header">
-            <span id="logoColorLabel">Current filter: SVG vector</span>
+          <div class="canvas-header status-line">
+            <span id="logoColorLabel">Format filter: All formats</span>
+            <span id="logoTypeStatus" class="type-status">Current filter: Logos - All formats - All types</span>
           </div>
-          <div class="logo-grid" id="logoGrid"></div>
+          <div class="logo-layout">
+            <div class="logo-filter">
+              <div class="filter-title">Filter by type</div>
+              <button class="filter-btn active" data-variant="all">All types</button>
+              <button class="filter-btn" data-variant="white">White</button>
+              <button class="filter-btn" data-variant="black">Black</button>
+              <button class="filter-btn" data-variant="square">Square</button>
+              <button class="filter-btn" data-variant="horizontal">Horizontal</button>
+            </div>
+            <div class="logo-grid" id="logoGrid"></div>
+          </div>
           <div class="logo-more" id="logoMoreMessage"></div>
         </div>
         <div class="legacy-toggle" id="legacyToggle">
@@ -159,7 +172,7 @@
       </section>
 
       <section id="sectionLottie" class="panel-section">
-        <h2 class="section-title">Lottie</h2>
+        <h2 class="section-title">Video</h2>
         <div class="lottie-row" id="motionRow"></div>
       </section>
 
