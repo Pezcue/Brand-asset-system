@@ -10,6 +10,8 @@ body {
 .app {
   display: flex;
   min-height: 100vh;
+  max-width: 1900px;
+  margin: 0 auto;
 }
 
 .sidebar {
@@ -95,17 +97,42 @@ body {
 
 .logo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px;
+}
+
+@media (max-width: 1100px) {
+  .logo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  .logo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .logo-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .logo-card {
   position: relative;
   border: 1px solid #ccc;
-  padding: 10px;
-  min-height: 140px;
+  padding: 12px;
+  width: 100%;
+  min-height: 0;
   background: #f6f6f6;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / 1;
+  padding-bottom: 44px;
 }
 
 .placeholder.shape {
@@ -142,9 +169,20 @@ body {
 .logo-preview {
   display: block;
   width: 100%;
-  max-height: 100px;
+  max-height: 160px;
   object-fit: contain;
   margin: 0 auto;
+}
+
+.doc-embed {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #ccc;
+  background: #f8f8f8;
+}
+
+.presentation-card .doc-embed {
+  height: 320px;
 }
 
 .logo-more {
@@ -171,17 +209,51 @@ body {
   gap: 8px;
 }
 
+.legacy-group {
+  margin-bottom: 12px;
+}
+
+.legacy-year {
+  font-weight: bold;
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
 .legacy-card {
   border: 1px solid #ccc;
   padding: 8px;
   text-align: center;
   background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .legacy-placeholder {
   height: 50px;
   background: #d0d0d0;
   margin-bottom: 6px;
+}
+
+.legacy-thumb {
+  height: 70px;
+  background: #f0f0f0;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px dashed #ccc;
+}
+
+.legacy-meta {
+  font-size: 11px;
+  color: #555;
+}
+
+.legacy-card .download-btn {
+  position: static;
+  margin-top: 4px;
+  align-self: center;
 }
 
 .hidden { display: none; }
@@ -235,10 +307,13 @@ body {
 }
 
 .zoom-box {
-  height: 200px;
+  width: 100%;
+  min-height: 220px;
+  aspect-ratio: 16 / 9;
   background: #e3e3e3;
   border: 1px solid #ccc;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
 }
 
@@ -291,7 +366,7 @@ body {
 
 .lottie-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 10px;
 }
 
@@ -301,6 +376,9 @@ body {
   background: #fff;
   text-align: center;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .lottie-placeholder {
@@ -311,9 +389,9 @@ body {
 
 .lottie-video {
   width: 100%;
-  height: 140px;
+  height: auto;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
-  margin-bottom: 6px;
 }
 
 .lottie-card .download-btn {
@@ -332,10 +410,12 @@ body {
   border: 1px solid #ccc;
   padding: 10px;
   background: #fff;
+  max-width: 800px;
+  min-height: 400px;
 }
 
 .presentation-placeholder {
-  height: 100px;
+  height: 400px;
   background: #e0e0e0;
   border: 1px dashed #aaa;
   display: grid;
@@ -352,4 +432,34 @@ body {
 
 .presentation-footer .download-btn {
   position: static;
+}
+
+.font-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.font-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.font-name {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.font-meta {
+  font-size: 12px;
+  color: #555;
+}
+
+.font-card .download-btn {
+  position: static;
+  align-self: flex-start;
 }
