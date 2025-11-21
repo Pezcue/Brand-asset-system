@@ -1,180 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MPENGS Brand Asset System</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brand Asset System</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <div class="app">
+  <header class="topbar">
+    <div class="logo-mark" aria-label="Brand Asset System">
+      <span>Brand Asset System</span>
+    </div>
+    <div class="search-bar">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 015.292 13.708l4 4-1.414 1.414-4-4A8 8 0 1110 2zm0 2a6 6 0 100 12 6 6 0 000-12z"/></svg>
+      <input id="searchInput" type="search" placeholder="Search assets…" autocomplete="off" />
+    </div>
+  </header>
+
+  <div class="layout">
     <aside class="sidebar">
-      <div class="brand-title">Brand asset system</div>
-      <nav class="nav-list">
-        <button class="nav-item active" data-target="sectionLogo">Logo</button>
-        <button class="nav-item" data-target="sectionColors">Colors</button>
-        <button class="nav-item" data-target="sectionZoom">Zoom background</button>
-        <button class="nav-item" data-target="sectionPhoto">Photography boxes</button>
-        <button class="nav-item" data-target="sectionLottie">Lottie</button>
-        <button class="nav-item" data-target="sectionFonts">Fonts</button>
-        <button class="nav-item" data-target="sectionPresentations">Documents &amp; packs</button>
-      </nav>
+      <h3>Formats</h3>
+      <ul id="formatNav" class="format-list">
+        <li><button data-format="all" class="active">All</button></li>
+        <li><button data-format="vector">Vector (svg, ai, eps)</button></li>
+        <li><button data-format="raster">Raster (png, jpg)</button></li>
+        <li><button data-format="animation">Animation (gif)</button></li>
+        <li><button data-format="video">Motion (mp4)</button></li>
+        <li><button data-format="document">Documents (pdf, docx)</button></li>
+        <li><button data-format="package">Archives/packs (zip)</button></li>
+        <li><button data-format="font">Fonts (otf)</button></li>
+        <li><button data-format="image">Generic image</button></li>
+      </ul>
+
+      <h3>Orientation</h3>
+      <div id="orientationFilters" class="pill-group">
+        <button data-orientation="all" class="active">All</button>
+        <button data-orientation="horizontal">Horizontal</button>
+        <button data-orientation="vertical">Vertical</button>
+        <button data-orientation="square">Square</button>
+      </div>
     </aside>
 
-    <main class="main">
-      <div class="breadcrumb">Brand Asset System &gt; Brand &gt; MPENGS</div>
-
-      <section id="sectionLogo" class="panel-section" style="display: block;">
-        <h2 class="section-title">Logo</h2>
-        <div class="tabs">
-          <button class="tab-btn active" data-target="svg">SVG vector</button>
-          <button class="tab-btn" data-target="ai">Illustrator (AI)</button>
-          <button class="tab-btn" data-target="all">All logo assets</button>
-        </div>
-        <div class="logo-canvas">
-          <div class="canvas-header">
-            <span id="logoColorLabel">Current filter: SVG vector</span>
-          </div>
-          <div class="logo-grid" id="logoGrid"></div>
-          <div class="logo-more" id="logoMoreMessage"></div>
-        </div>
-        <div class="legacy-toggle" id="legacyToggle">
-          <span class="caret">&#9656;</span>
-          <span class="toggle-label">Show legacy logos</span>
-        </div>
-        <div class="legacy-grid hidden" id="legacyLogos">
-          <div class="legacy-card">
-            <div class="legacy-placeholder"></div>
-            <div class="label">Logo 1990</div>
-          </div>
-          <div class="legacy-card">
-            <div class="legacy-placeholder"></div>
-            <div class="label">Logo 2000</div>
-          </div>
-          <div class="legacy-card">
-            <div class="legacy-placeholder"></div>
-            <div class="label">Logo 2005</div>
-          </div>
-          <div class="legacy-card">
-            <div class="legacy-placeholder"></div>
-            <div class="label">Logo 2010</div>
+    <main class="content">
+      <section id="specialColors" class="panel hidden">
+        <div class="panel-header">
+          <div>
+            <h2>Color Palettes</h2>
+            <p>Brand swatches with HEX values</p>
           </div>
         </div>
+        <div id="colorPalettes" class="palette-grid"></div>
       </section>
 
-      <section id="sectionColors" class="panel-section">
-        <h2 class="section-title">Colors</h2>
-        <div class="tabs">
-          <button class="tab-btn active" data-target="primaryColors">Primary</button>
-          <button class="tab-btn" data-target="secondaryColors">Secondary</button>
-          <button class="tab-btn" data-target="accentColors">Accents</button>
-        </div>
-        <div class="color-panels">
-          <div class="color-grid" data-group="primaryColors">
-            <div class="swatch" data-color="#1A73E8">
-              <div class="swatch-circle" style="background-color: #1A73E8;"></div>
-              <div class="swatch-label">
-                <span>#1A73E8</span>
-                <button class="copy-btn">Copy</button>
-              </div>
-            </div>
-            <div class="swatch" data-color="#0F4C81">
-              <div class="swatch-circle" style="background-color: #0F4C81;"></div>
-              <div class="swatch-label">
-                <span>#0F4C81</span>
-                <button class="copy-btn">Copy</button>
-              </div>
-            </div>
-            <div class="swatch" data-color="#0B2D4A">
-              <div class="swatch-circle" style="background-color: #0B2D4A;"></div>
-              <div class="swatch-label">
-                <span>#0B2D4A</span>
-                <button class="copy-btn">Copy</button>
-              </div>
-            </div>
-          </div>
-          <div class="color-grid hidden" data-group="secondaryColors">
-            <div class="swatch" data-color="#8BC34A">
-              <div class="swatch-circle" style="background-color: #8BC34A;"></div>
-              <div class="swatch-label">
-                <span>#8BC34A</span>
-                <button class="copy-btn">Copy</button>
-              </div>
-            </div>
-            <div class="swatch" data-color="#FFC107">
-              <div class="swatch-circle" style="background-color: #FFC107;"></div>
-              <div class="swatch-label">
-                <span>#FFC107</span>
-                <button class="copy-btn">Copy</button>
-              </div>
-            </div>
-            <div class="swatch" data-color="#FF7043">
-              <div class="swatch-circle" style="background-color: #FF7043;"></div>
-              <div class="swatch-label">
-                <span>#FF7043</span>
-                <button class="copy-btn">Copy</button>
-              </div>
-            </div>
-          </div>
-          <div class="color-grid hidden" data-group="accentColors">
-            <div class="swatch" data-color="#9C27B0">
-              <div class="swatch-circle" style="background-color: #9C27B0;"></div>
-              <div class="swatch-label">
-                <span>#9C27B0</span>
-                <button class="copy-btn">Copy</button>
-              </div>
-            </div>
-            <div class="swatch" data-color="#26A69A">
-              <div class="swatch-circle" style="background-color: #26A69A;"></div>
-              <div class="swatch-label">
-                <span>#26A69A</span>
-                <button class="copy-btn">Copy</button>
-              </div>
-            </div>
-            <div class="swatch" data-color="#E91E63">
-              <div class="swatch-circle" style="background-color: #E91E63;"></div>
-              <div class="swatch-label">
-                <span>#E91E63</span>
-                <button class="copy-btn">Copy</button>
-              </div>
-            </div>
+      <section id="specialTypography" class="panel hidden">
+        <div class="panel-header">
+          <div>
+            <h2>Typography</h2>
+            <p>Primary and secondary font previews</p>
           </div>
         </div>
-        <div class="copy-status" id="copyStatus"></div>
+        <div id="fontShowcase" class="font-showcase"></div>
       </section>
 
-      <section id="sectionZoom" class="panel-section">
-        <h2 class="section-title">Zoom background</h2>
-        <div class="zoom-box" id="zoomPreview"></div>
-        <div class="zoom-actions">
-          <div class="zoom-label" id="zoomLabel">Standard Zoom background</div>
-          <a class="download-btn" id="zoomDownload" download>Download</a>
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <h2>Assets</h2>
+            <p id="resultCount">Loading assets…</p>
+          </div>
+          <div class="actions">
+            <button id="resetFilters" class="ghost-btn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 5v2a5 5 0 11-5 5H5a7 7 0 107-7z"/><path fill="currentColor" d="M13 4h7v2h-7zM20 4v7h-2V4z"/></svg>
+              Reset
+            </button>
+          </div>
         </div>
-      </section>
-
-      <section id="sectionPhoto" class="panel-section">
-        <h2 class="section-title">Photography boxes</h2>
-        <div class="photo-grid" id="photoGrid"></div>
-        <p class="helper-text">Use these boxes as guides for photography placement.</p>
-      </section>
-
-      <section id="sectionLottie" class="panel-section">
-        <h2 class="section-title">Lottie</h2>
-        <div class="lottie-row" id="motionRow"></div>
-      </section>
-
-      <section id="sectionPresentations" class="panel-section">
-        <h2 class="section-title">Documents &amp; packs</h2>
-        <div class="presentation-stack" id="presentationStack"></div>
-      </section>
-
-      <section id="sectionFonts" class="panel-section">
-        <h2 class="section-title">Fonts</h2>
-        <div class="font-grid" id="fontGrid"></div>
-        <p class="helper-text">OTF files included for Neue Haas Grotesk and Myriad Pro variants used in the brand system.</p>
+        <div id="assetGrid" class="asset-grid"></div>
       </section>
     </main>
   </div>
-  <script src="script.js"></script>
+
+  <div id="previewModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="icon-btn close-btn" id="closePreview" aria-label="Close preview">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.3 5.71L12 12l6.3 6.29-1.41 1.42L10.59 13.4 4.3 19.71 2.89 18.3 9.17 12 2.89 5.71 4.3 4.29 10.59 10.6l6.3-6.3z"/></svg>
+      </button>
+      <div id="previewBody" class="preview-body">Loading…</div>
+      <div id="previewMeta" class="preview-meta"></div>
+    </div>
+  </div>
+
+  <script src="js/filter-system.js"></script>
+  <script src="js/asset-manager.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

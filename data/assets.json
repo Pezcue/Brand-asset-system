@@ -1,0 +1,175 @@
+[
+  {
+    "id": "logo-primary-full",
+    "slug": "mpengs-logo-full",
+    "name": "Primary Logo Full",
+    "description": "Main lockup on light backgrounds",
+    "category": "logos",
+    "orientation": "horizontal",
+    "size": "2200x900",
+    "formats": [
+      { "ext": "svg", "url": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200'><rect width='400' height='200' fill='%23e8ecf2'/><text x='50%' y='50%' font-size='28' fill='%230b1020' font-family='Arial' text-anchor='middle' dominant-baseline='middle'>Logo Full</text></svg>" },
+      { "ext": "png", "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAHUlEQVQoU2NkYGD4z0AEYBxVSFUwCkb9H0QZGwMAfAQE5cQs9kUAAAAASUVORK5CYII=" }
+    ]
+  },
+  {
+    "id": "logo-primary-vertical",
+    "slug": "mpengs-logo-vertical",
+    "name": "Primary Logo Vertical",
+    "description": "Stacked mark for narrow spaces",
+    "category": "logos",
+    "orientation": "vertical",
+    "size": "1400x1900",
+    "formats": [
+      { "ext": "svg", "url": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='320'><rect width='240' height='320' fill='%23e8ecf2'/><text x='50%' y='50%' font-size='24' fill='%230b1020' font-family='Arial' text-anchor='middle' dominant-baseline='middle'>Logo Vertical</text></svg>" },
+      { "ext": "png", "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAHUlEQVQoU2NkQAP/GUAAAjEipAmN+YwAAAAASUVORK5CYII=" }
+    ]
+  },
+  {
+    "id": "logo-secondary-wordmark",
+    "slug": "mpengs-wordmark",
+    "name": "Secondary Wordmark",
+    "description": "Text-only lockup",
+    "category": "logos",
+    "orientation": "horizontal",
+    "size": "2000x640",
+    "formats": [
+      { "ext": "ai", "url": "data:application/octet-stream;base64,UGxhY2Vob2xkZXIgQUk=" },
+      { "ext": "eps", "url": "data:application/octet-stream;base64,UGxhY2Vob2xkZXIgRVBTA==" }
+    ]
+  },
+  {
+    "id": "logo-favicon",
+    "slug": "mpengs-favicon",
+    "name": "Favicon",
+    "description": "Square icon for browsers",
+    "category": "logos",
+    "orientation": "square",
+    "size": "512x512",
+    "formats": [
+      { "ext": "png", "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAHUlEQVQoU2NkIBIwEqmOYQwMjIwMDAwGAAArvQIHjsr6nQAAAABJRU5ErkJggg==" },
+      { "ext": "svg", "url": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64'><rect width='64' height='64' rx='8' fill='%234c8dff'/><text x='50%' y='50%' font-size='22' fill='white' font-family='Arial' text-anchor='middle' dominant-baseline='middle'>F</text></svg>" }
+    ]
+  },
+  {
+    "id": "palette-core",
+    "name": "Core Palette",
+    "description": "Primary brand colors",
+    "category": "colors",
+    "orientation": "square",
+    "swatches": ["#1A73E8", "#0F4C81", "#0B2D4A", "#8BC34A", "#FFC107"],
+    "formats": []
+  },
+  {
+    "id": "palette-accents",
+    "name": "Accent Palette",
+    "description": "Secondary highlight colors",
+    "category": "colors",
+    "orientation": "square",
+    "swatches": ["#FF7043", "#9C27B0", "#26A69A", "#E91E63", "#F5A623"],
+    "formats": []
+  },
+  {
+    "id": "font-primary",
+    "name": "Primary Typeface",
+    "description": "Neue Haas Grotesk",
+    "category": "typography",
+    "orientation": "horizontal",
+    "fontFamily": "'Helvetica Neue', Arial, sans-serif",
+    "sample": "Neue Haas Grotesk — The quick brown fox jumps over the lazy dog.",
+    "formats": [
+      { "ext": "otf", "url": "data:font/otf;base64,AAE=" }
+    ]
+  },
+  {
+    "id": "font-secondary",
+    "name": "Secondary Typeface",
+    "description": "Myriad Pro",
+    "category": "typography",
+    "orientation": "horizontal",
+    "fontFamily": "'Myriad Pro', 'Segoe UI', sans-serif",
+    "sample": "Myriad Pro — Fast waltz, bad nymph, for quick jigs vex.",
+    "formats": [
+      { "ext": "otf", "url": "data:font/otf;base64,AAE=" }
+    ]
+  },
+  {
+    "id": "bg-zoom",
+    "name": "Zoom Background",
+    "description": "Standard branded virtual background",
+    "category": "images",
+    "orientation": "horizontal",
+    "size": "1920x1080",
+    "formats": [
+      { "ext": "jpg", "url": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUTExMWFhUXGBgaGBgYGBgYGBgaGBgYGBYYGBgcHSggGBolHRgYITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGy0lICYtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAKgBLAMBIgACEQEDEQH/xAAbAAADAQEBAQEAAAAAAAAAAAAABQYDAQIEB//EADsQAAIBAwIDBgQEBQQDAAAAAAECAwAEEQUSITFBEyJRYXEGEzKRobHR8BQjQlJi8SMzcoKS0fAkY//EABkBAAMBAQEAAAAAAAAAAAAAAAIDBAEABf/EACIRAAMAAgICAgMBAAAAAAAAAAABAhEDIRIxQQQTIlEy/9oADAMBAAIRAxEAPwD6jREQEREBERAREQEREBERAUwv4HR6pYtMylzpNEqem1KJtWZS0W7oG8Lt2JYB8Bz6j86vYrXZIXS2IiftMQzB7R7VzqJt7C9yBFgPzA8vH1qtpV1F4rY0dyXWmF8k87bO7hmAldgx8q88K1PdKVvcXtpw2t5SjZktpG8/lnb3EgD0UMCPfWpar3LRqUqt5l3Mm2+yK5sM9dQ3D3IPNa2pV1b4pcOorJtW3NjHg8+1mJvOCO5B70V/0qtz0trR2GiS1jS2skju4YkPfYMP8ASj7dR1+h3YV1OQk8xI5JJG4GzMA9j6V1REQEREBERAREQEREBERAREQEREBERAREQEFE1o1K20tPRLG+JHC3kGCD5nxk/zqlo1s1q3sm7ltK8xBpnkHR6eWf1qs2vuzr5a8JbdV9xNuxsC5iT6E9aW16HaY3ltHG0hW2d83ZBA/LGgY4OB/nXGeJmje3sY4ySfvsox6k9qcek6Uabe0i2RYiO+0d5i6kG3faIIPxrHqHo1SltL+/wBPHltny6bXH0GcMFx1FSVWzRbdrttNtEgiI5Yl+w2PqBWtStnZtrs5mVlkbt+WXUkkLgcn6Gs66Vp0MU75rq0zMzW2MzRzKNywT+oc8g+tP1o1u1LVppW8QkccYfuyqfnYDnPU1e2tKcV5zt5dGzZJLzZhxgHrvnpVlREQEREBERAREQEREBERAREQEREBERAREQEREBRAkUldK1A+2P9N07tKkttbw4ZobuRskfyHOv8AKuOVR+GSqRroq1C1l5ZHgzWfNbn1zHPp3qpaRaS4v9T3lXzCPK6T+If0pJREQEREBERAREQEREBERAREQEREBERAREQEREBEQf/2Q==" }
+    ]
+  },
+  {
+    "id": "pattern-tiles",
+    "name": "Geometric Pattern",
+    "description": "Reusable background pattern",
+    "category": "images",
+    "orientation": "square",
+    "size": "2048x2048",
+    "formats": [
+      { "ext": "png", "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIElEQVQoU2NkYGD4z0AEMFGqgWjAgA0YhMhgMgFhx1AEAEoWBXxCzBk6AAAAAElFTkSuQmCC" },
+      { "ext": "svg", "url": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><defs><pattern id='p' width='20' height='20' patternUnits='userSpaceOnUse'><rect width='20' height='20' fill='%231f2532'/><circle cx='10' cy='10' r='4' fill='%234c8dff'/></pattern></defs><rect width='200' height='200' fill='url(%23p)'/></svg>" }
+    ]
+  },
+  {
+    "id": "illustration-hero",
+    "name": "Hero Illustration",
+    "description": "Landing page hero artwork",
+    "category": "images",
+    "orientation": "horizontal",
+    "size": "2400x1400",
+    "formats": [
+      { "ext": "svg", "url": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='220'><linearGradient id='g' x1='0' x2='1' y1='0' y2='1'><stop stop-color='%234c8dff' offset='0%'/><stop stop-color='%2371d16c' offset='100%'/></linearGradient><rect width='400' height='220' rx='18' fill='url(%23g)'/><text x='50%' y='50%' fill='white' font-family='Arial' font-size='22' text-anchor='middle' dominant-baseline='middle'>Hero Illustration</text></svg>" },
+      { "ext": "png", "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAG0lEQVQoU2NkYGD4z0AEMFGqgWjAgCEMRkYCAAwjA/nhc5QxAAAAAElFTkSuQmCC" }
+    ]
+  },
+  {
+    "id": "animation-lottie",
+    "name": "Lottie Animation",
+    "description": "Animated icon sequence",
+    "category": "multimedia",
+    "orientation": "square",
+    "size": "512x512",
+    "formats": [
+      { "ext": "gif", "url": "data:image/gif;base64,R0lGODlhCgAKAKECAAAAAP///wAAACH5BAEKAAIALAAAAAAKAAoAAAIKlI+py+0Po5yUFQA7" },
+      { "ext": "mp4", "url": "data:video/mp4;base64,AAAAHGZ0eXBpc29tAAAAAGlzb21pc28yYXZjMQAAAAhmcmVlAAAAIG1kYXQAAAAAAAQAAAABAAEAAQAAAAEAAAAAAAAAAAAAAAACAAACcQ==" }
+    ]
+  },
+  {
+    "id": "video-brand",
+    "name": "Brand Reel",
+    "description": "60s brand sizzle video",
+    "category": "multimedia",
+    "orientation": "horizontal",
+    "size": "1920x1080",
+    "formats": [
+      { "ext": "mp4", "url": "data:video/mp4;base64,AAAAHGZ0eXBpc29tAAAAAGlzb21pc28yYXZjMQAAAAhmcmVlAAAAIG1kYXQAAAAAAAQAAAABAAEAAQAAAAEAAAAAAAAAAAAAAAACAAACcQ==" }
+    ]
+  },
+  {
+    "id": "guidelines",
+    "name": "Brand Guidelines",
+    "description": "Comprehensive brand book",
+    "category": "documentation",
+    "orientation": "vertical",
+    "formats": [
+      { "ext": "pdf", "url": "data:application/pdf;base64,JVBERi0xLjQKJeLjz9MKMSAwIG9iago8PC9UeXBlL0NhdGFsb2cvUGFnZXMgMiAwIFI+PgplbmRvYmoKMiAwIG9iago8PC9UeXBlL1BhZ2VzL0tJRFs0IDAgUl0vQ291bnQgMT4+CmVuZG9iago0IDAgb2JqCjw8L1R5cGUvUGFnZS9NZWRpYUJveFswIDAgNjEyIDc5Ml0vUGFyZW50IDIgMCBSL1Jlc291cmNlczw8L0ZvbnQ8PC9GMCA1IDAgUj4+Pj4vQ29udGVudHMgMyAwIFI+PgplbmRvYmoKMyAwIG9iago8PC9MZW5ndGggNTQ+PnN0cmVhbQpCVAovRjAgMjQgVGYgMjUwIDY1MCBUZAooQnJhbmQgR3VpZGVsaW5lcyBQaWFmbiwgQnJpZWYpIFRqCkVuZAplbmRzdHJlYW0KZW5kb2JqCjUgMCBvYmoKPC9UeXBlL0ZvbnQvU3VidHlwZS9UeXBlMS9CYXNlRm9udC9IZWx2ZXRpY2EvRW5jb2RpbmcvV2luQW5zaUVuY29kaW5nPj4KZW5kb2JqCnhyZWYKMCA2CjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDExMCAwMDAwMCBuIAowMDAwMDAwMDYxIDAwMDAwIG4gCjAwMDAwMDAxMTEgMDAwMDAgbiAKMDAwMDAwMDI0MyAwMDAwMCBuIAowMDAwMDAwMzEwIDAwMDAwIG4gCnRyYWlsZXIKPDwvUm9vdCAxIDAgUi9TaXplIDY+PgpzdGFydHhyZWYKNDI5CiUlRU9G" }
+    ]
+  },
+  {
+    "id": "templates-pack",
+    "name": "Template Pack",
+    "description": "Presentations and letterheads",
+    "category": "documentation",
+    "orientation": "horizontal",
+    "formats": [
+      { "ext": "zip", "url": "data:application/zip;base64,UEsFBgAAAAAAAAAAAAAAAAAAAAAAAA==" },
+      { "ext": "pdf", "url": "data:application/pdf;base64,JVBERi0xLjQKJcTl8uXrp/Og0MTGCjEgMCBvYmoKPDwvVHlwZS9DYXRhbG9nL1BhZ2VzIDIgMCBSPj4KZW5kb2JqCjIgMCBvYmoKPDwvVHlwZS9QYWdlcy9LaWRbNCAwIFJdL0NvdW50IDE+PgplbmRvYmoKMyAwIG9iago8PC9MZW5ndGggMzY+PnN0cmVhbQpCVAovRjAgMjQgVGYgMTUwIDc0MCBUZAooVGVtcGxhdGUgUHJldmlldykgVGoKZW5kc3RyZWFtCmVuZG9iago0IDAgb2JqCjw8L1R5cGUvUGFnZS9NZWRpYUJveFswIDAgNjEyIDc5Ml0vUGFyZW50IDIgMCBSL1Jlc291cmNlczw8L0ZvbnQ8PC9GMCA1IDAgUj4+Pj4vQ29udGVudHMgMyAwIFI+PgplbmRvYmoKNSAwIG9iago8PC9UeXBlL0ZvbnQvU3VidHlwZS9UeXBlMS9CYXNlRm9udC9IZWx2ZXRpY2EvRW5jb2RpbmcvV2luQW5zaUVuY29kaW5nPj4KZW5kb2JqCnhyZWYKMCA2CjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDExMCAwMDAwMCBuIAowMDAwMDAwMDYxIDAwMDAwIG4gCjAwMDAwMDAxMTEgMDAwMDAgbiAKMDAwMDAwMDIwOSAwMDAwMCBuIAowMDAwMDAwMjc2IDAwMDAwIG4gCnRyYWlsZXIKPDwvUm9vdCAxIDAgUi9TaXplIDY+PgpzdGFydHhyZWYKMjkwCiUlRU9G" }
+    ]
+  }
+]
