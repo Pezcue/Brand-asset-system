@@ -105,6 +105,7 @@ body {
   padding: 10px;
   min-height: 140px;
   background: #f6f6f6;
+  overflow: hidden;
 }
 
 .placeholder.shape {
@@ -112,6 +113,11 @@ body {
   height: 60px;
   background: #cfcfcf;
   margin: 0 auto;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  color: #333;
+  border: 1px dashed #999;
 }
 
 .logo-card .label {
@@ -129,6 +135,16 @@ body {
   background: #e6e6e6;
   cursor: pointer;
   font-size: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-preview {
+  display: block;
+  width: 100%;
+  max-height: 100px;
+  object-fit: contain;
+  margin: 0 auto;
 }
 
 .logo-more {
@@ -222,6 +238,8 @@ body {
   height: 200px;
   background: #e3e3e3;
   border: 1px solid #ccc;
+  background-size: cover;
+  background-position: center;
 }
 
 .zoom-actions {
@@ -235,6 +253,10 @@ body {
   font-size: 13px;
 }
 
+.zoom-actions .download-btn {
+  position: static;
+}
+
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -246,6 +268,20 @@ body {
   padding-top: 60%;
   background: #d9d9d9;
   border: 1px solid #bfbfbf;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.photo-overlay {
+  position: absolute;
+  left: 6px;
+  bottom: 6px;
+  padding: 4px 6px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 12px;
+  border-radius: 2px;
 }
 
 .helper-text {
@@ -264,12 +300,26 @@ body {
   padding: 10px;
   background: #fff;
   text-align: center;
+  position: relative;
 }
 
 .lottie-placeholder {
   height: 100px;
   background: #d0d0d0;
   margin-bottom: 6px;
+}
+
+.lottie-video {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  margin-bottom: 6px;
+}
+
+.lottie-card .download-btn {
+  position: static;
+  margin-top: 6px;
+  display: inline-block;
 }
 
 .presentation-stack {
@@ -288,6 +338,9 @@ body {
   height: 100px;
   background: #e0e0e0;
   border: 1px dashed #aaa;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
 }
 
 .presentation-footer {
@@ -295,4 +348,8 @@ body {
   display: flex;
   justify-content: space-between;
   font-size: 13px;
+}
+
+.presentation-footer .download-btn {
+  position: static;
 }

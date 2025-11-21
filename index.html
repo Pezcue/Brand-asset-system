@@ -26,38 +26,16 @@
       <section id="sectionLogo" class="panel-section" style="display: block;">
         <h2 class="section-title">Logo</h2>
         <div class="tabs">
-          <button class="tab-btn active" data-target="primary">Primary</button>
-          <button class="tab-btn" data-target="black">Black</button>
-          <button class="tab-btn" data-target="white">White</button>
-          <button class="tab-btn" data-target="more">&gt;&gt;</button>
+          <button class="tab-btn active" data-target="svg">SVG vector</button>
+          <button class="tab-btn" data-target="ai">Illustrator (AI)</button>
+          <button class="tab-btn" data-target="all">All logo assets</button>
         </div>
         <div class="logo-canvas">
           <div class="canvas-header">
-            <span id="logoColorLabel">Current color: Primary</span>
+            <span id="logoColorLabel">Current filter: SVG vector</span>
           </div>
-          <div class="logo-grid">
-            <div class="logo-card">
-              <div class="placeholder shape"></div>
-              <div class="label">Full lockup</div>
-              <button class="download-btn">Download</button>
-            </div>
-            <div class="logo-card">
-              <div class="placeholder shape"></div>
-              <div class="label">Horizontal</div>
-              <button class="download-btn">Download</button>
-            </div>
-            <div class="logo-card">
-              <div class="placeholder shape"></div>
-              <div class="label">Symbol only</div>
-              <button class="download-btn">Download</button>
-            </div>
-            <div class="logo-card">
-              <div class="placeholder shape"></div>
-              <div class="label">Wordmark only</div>
-              <button class="download-btn">Download</button>
-            </div>
-          </div>
-          <div class="logo-more" id="logoMoreMessage">Additional variants coming soon</div>
+          <div class="logo-grid" id="logoGrid"></div>
+          <div class="logo-more" id="logoMoreMessage"></div>
         </div>
         <div class="legacy-toggle" id="legacyToggle">
           <span class="caret">&#9656;</span>
@@ -166,72 +144,27 @@
 
       <section id="sectionZoom" class="panel-section">
         <h2 class="section-title">Zoom background</h2>
-        <div class="zoom-box"></div>
+        <div class="zoom-box" id="zoomPreview"></div>
         <div class="zoom-actions">
-          <div class="zoom-label">Standard Zoom background</div>
-          <button class="download-btn">Download</button>
+          <div class="zoom-label" id="zoomLabel">Standard Zoom background</div>
+          <a class="download-btn" id="zoomDownload" download>Download</a>
         </div>
       </section>
 
       <section id="sectionPhoto" class="panel-section">
         <h2 class="section-title">Photography boxes</h2>
-        <div class="photo-grid">
-          <div class="photo-placeholder"></div>
-          <div class="photo-placeholder"></div>
-          <div class="photo-placeholder"></div>
-          <div class="photo-placeholder"></div>
-          <div class="photo-placeholder"></div>
-          <div class="photo-placeholder"></div>
-          <div class="photo-placeholder"></div>
-          <div class="photo-placeholder"></div>
-          <div class="photo-placeholder"></div>
-        </div>
+        <div class="photo-grid" id="photoGrid"></div>
         <p class="helper-text">Use these boxes as guides for photography placement.</p>
       </section>
 
       <section id="sectionLottie" class="panel-section">
         <h2 class="section-title">Lottie</h2>
-        <div class="lottie-row">
-          <div class="lottie-card">
-            <div class="lottie-placeholder"></div>
-            <div class="label">Lottie icon animation</div>
-          </div>
-          <div class="lottie-card">
-            <div class="lottie-placeholder"></div>
-            <div class="label">Lottie icon animation</div>
-          </div>
-          <div class="lottie-card">
-            <div class="lottie-placeholder"></div>
-            <div class="label">Lottie icon animation</div>
-          </div>
-        </div>
+        <div class="lottie-row" id="motionRow"></div>
       </section>
 
       <section id="sectionPresentations" class="panel-section">
         <h2 class="section-title">Presentations</h2>
-        <div class="presentation-stack">
-          <div class="presentation-card">
-            <div class="presentation-placeholder"></div>
-            <div class="presentation-footer">
-              <span>Team update template</span>
-              <button class="download-btn">Download template</button>
-            </div>
-          </div>
-          <div class="presentation-card">
-            <div class="presentation-placeholder"></div>
-            <div class="presentation-footer">
-              <span>Product overview template</span>
-              <button class="download-btn">Download template</button>
-            </div>
-          </div>
-          <div class="presentation-card">
-            <div class="presentation-placeholder"></div>
-            <div class="presentation-footer">
-              <span>All-hands template</span>
-              <button class="download-btn">Download template</button>
-            </div>
-          </div>
-        </div>
+        <div class="presentation-stack" id="presentationStack"></div>
       </section>
     </main>
   </div>
